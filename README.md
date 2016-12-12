@@ -1,13 +1,19 @@
-Ionic App Base
+Projeto própio 
 =====================
 
-A starting project for Ionic that optionally supports using custom SCSS.
+App desenvolvido para verificar licenças de outro sistema, com base em requisição.
 
-## Using this project
+## Neste foi usado
 
-We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
+# Cordova Background Plug-in
 
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
+```bash
+	[Cordova plugin](https://github.com/katzer/cordova-plugin-background-mode) para impedir que o aplicativo de ir dormir enquanto no fundo.
+```
+
+Recomendamos usar o [Ionic CLI](https://github.com/driftyco/ionic-cli) para criar novos projetos de Ionic baseados neste projeto, mas usar um modelo de inicialização pronto.
+
+Por exemplo, para iniciar um novo projeto de Ionic com a interface de tabs padrão, verifique se o utilitário `ionic` está instalado:
 
 ```bash
 $ npm install -g ionic
@@ -16,7 +22,7 @@ $ npm install -g ionic
 Then run: 
 
 ```bash
-$ ionic start myProject tabs
+$ ionic serve
 ```
 
 More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
