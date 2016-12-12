@@ -1,0 +1,39 @@
+ <ion-list>
+
+        
+
+         <br/>
+           <!--  <div class="box__header">
+              <h3 class="box__header-title">stats</h3>
+            </div> -->
+            <div class="box__body">
+              <div class="stats stats--main">
+                <div class="stats__amount">{{licenca.total}}</div>
+                <div class="stats__caption">Total de licenças</div>
+              </div>
+
+              <div class="stats">
+                <div class="stats__amount">{{licenca.consumida}}</div>
+                <div class="stats__caption">Licenças consumidas</div>
+                <div class="stats__change">
+                  <div class="stats__value">{{licencaUsadas}}%</div>
+                  <!-- <div class="stats__period">this week</div -->
+                </div>
+              </div>
+
+              <div class="stats">
+                <div class="stats__amount">{{licenca.total - licenca.consumida}}</div>
+                <div class="stats__caption">Licenças restantes</div>
+                <div class="stats__change">
+                  <div class="{{ licensaRestantes <= 20 ? 'stats__value--negative' : licensaRestantes > 70 ? 'stats__value--positive' : 'stats__value'   }}">{{licensaRestantes}}%</div>
+                  <!-- <div class="stats__period">this week</div> -->
+                </div>
+              </div>
+
+
+           
+
+        <ion-list>   
+                  
+
+
