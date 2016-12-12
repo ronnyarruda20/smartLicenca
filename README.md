@@ -3,13 +3,12 @@ Projeto própio
 
 App desenvolvido para verificar licenças de outro sistema, com base em requisição.
 
-## Neste foi usado
+## Neste projeto foi usado
 
-# Cordova Background Plug-in
+### Cordova Background Plug-in
 
-```bash
-	[Cordova plugin](https://github.com/katzer/cordova-plugin-background-mode) para impedir que o aplicativo de ir dormir enquanto no fundo.
-```
+[Cordova plugin](https://github.com/katzer/cordova-plugin-background-mode) para impedir que o aplicativo de ir dormir enquanto no fundo.
+
 
 Recomendamos usar o [Ionic CLI](https://github.com/driftyco/ionic-cli) para criar novos projetos de Ionic baseados neste projeto, mas usar um modelo de inicialização pronto.
 
