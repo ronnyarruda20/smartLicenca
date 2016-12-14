@@ -59,9 +59,11 @@
            <ion-toggle  ng-model="$storage.ativo" ng-checked="$storage.ativo"  ng-click="isAtivo()"
            toggle-class="toggle-calm">Ativar segundo plano</ion-toggle>
 
-             <button class="button" ng-click="add()">Add notification</button>
-             <button class="button" ng-click="isScheduled()">Is Scheduled</button>
-     
+           <label class="item item-input">
+              <span class="input-label">Minutos</span>
+            <input type="tel"  ng-model="$storage.minuto" maxlength="2">
+          </label>
+
     </ion-content>
   </ion-pane>
 

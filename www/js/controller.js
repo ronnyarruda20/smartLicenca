@@ -10,8 +10,11 @@ angular.module('starter').controller('controller', ['$scope', 'service', '$ionic
 
 	$scope.licencaUsadas = {};
 
+	var mili = 0;
+
 	$scope.$storage = $localStorage.$default({
-          ativo: false
+          ativo: false,
+          minuto: 2
      });
 
 	$scope.atualizaStatus = function(){
@@ -43,39 +46,53 @@ angular.module('starter').controller('controller', ['$scope', 'service', '$ionic
   	};
 
   	$scope.isAtivo = function(){
-  		return $localStorage.ativo;
-  	}
+		if($localStorage.minuto == null){
+				alert("campo minuto esta nulo");
+				$localStorage.ativo = false;
+				return;
+		}
 
-	document.addEventListener('deviceready', function () {
-		
-    // Android customization
-    cordova.plugins.backgroundMode.setDefaults({ 
-    	title:  'Rodando em segundo',
-    	text:'Doing heavy tasks.'});
+		if($localStorage.minuto > 60){
+				alert("não pode ser maior que 60 mininutos");
+				$localStorage.ativo = false;
+				return;
+		}
 
-	    if($scope.isAtivo()){
+		 mili = $localStorage.minuto * 60000;
+
+	    if($localStorage.ativo){
+
 			// Enable background mode
 			cordova.plugins.backgroundMode.enable();
-
 	    }else{
 	    	// disable background mode
 	    	cordova.plugins.backgroundMode.disable();
 	    }
-
+  	}
+  		
+			
+	document.addEventListener('deviceready', function () {
+					
+			    // Android customization
+		cordova.plugins.backgroundMode.setDefaults({ 
+		title:  'Rodando em segundo',
+		text:'Doing heavy tasks.'});
 
 		// Called when background mode has been activated
 		cordova.plugins.backgroundMode.onactivate = function () {
-		cordova.plugins.backgroundMode.configure({
-			                text:'Rodando em segundo plano for more than 5s now.'
-		});
-		setTimeout(function () {
-		// Modify the currently displayed notification
+			cordova.plugins.backgroundMode.configure({
+			text:'Rodando em segundo plano for more than 5s now.'
+			});
+			setTimeout(function () {
+			// Modify the currently displayed notification
 
 
 
-		 }, 5000);
-		}
+				}, mili);
+			}
 	}, false);
+
+	   
 
 	$scope.add = function() {
         var alarmTime = new Date();
